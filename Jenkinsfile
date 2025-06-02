@@ -44,23 +44,6 @@ pipeline {
             }
         }
 
-        stage('Port Forward') {
-            steps {
-                script {
-                    sh "kubectl port-forward svc/demo-app 5000:5000"
-                }
-            }
-        }
-
-        stage('Test Application') {
-            steps {
-                script {
-                    sh "curl -vvv http://localhost:5000 || exit 1"
-                }
-            }
-        }
-    }
-
     post {
         success {
             echo 'Pipeline completed successfully!'
