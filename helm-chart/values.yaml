@@ -1,0 +1,7 @@
+appName: demo-app
+appImage: neilsamaa/demo-app
+appVersion: latest
+appReplicas: 2
+containerPort: 5000
+servicePort: 5000
+serviceType: ClusterIP
