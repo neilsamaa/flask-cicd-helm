@@ -63,6 +63,22 @@ flask-cicd-helm
    - Verify the deployment
    - Test Application
 
+
+## Manual Install Application using Helm
+```
+helm install demo-app helm-chart
+```
+
+## Manual Update Application using Helm
+```
+helm upgrade demo-app helm-chart
+```
+
+## Uninstall Update Application using Helm
+```
+helm uninstall demo-app
+```
+
 ## Accessing the Application
 
 Once the deployment is successful, you can access the Flask application by running:
