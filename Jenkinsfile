@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy to Minikube') {
             steps {
                 script {
-                    sh "helm upgrade --install demo-app ${HELM_CHART_DIR} --namespace ${K8S_NAMESPACE}"
+                    sh "helm install demo-app ${HELM_CHART_DIR} --namespace ${K8S_NAMESPACE}"
                 }
             }
         }
